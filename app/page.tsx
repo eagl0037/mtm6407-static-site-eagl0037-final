@@ -1,35 +1,54 @@
 'use client';
 
+import { Variants, motion } from 'framer-motion';
 import Image from 'next/image';
+
+const variants: Variants = {
+  hidden: { opacity: 0, y: 30 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: 'easeOut' } },
+};
 
 export default function Home() {
   return (
-    <>
-      <section style={{ textAlign: 'center', padding: '2rem' }}>
+    <main style={{ padding: '2rem', maxWidth: 800, margin: 'auto' }}>
+      <motion.section
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        variants={variants}
+        style={{ textAlign: 'center', marginBottom: '3rem' }}
+      >
         <Image
           src="/yurr.png"
           alt="Natasha Eagles"
           width={160}
           height={160}
-          className="avatar"
           priority
         />
         <h1>Natasha Eagles</h1>
-        <p>
-          Full Stack Developer | Web Designer | Creative Problem Solver
-        </p>
-      </section>
+        <p>Full Stack Developer | Web Designer | Creative Problem Solver</p>
+      </motion.section>
 
-      <section style={{ maxWidth: '700px', margin: '2rem auto' }}>
+      <motion.section
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        variants={variants}
+        style={{ marginBottom: '3rem' }}
+      >
         <h2>Welcome</h2>
         <p>
-          Welcome to my portfolio! I’m Natasha Eagles, passionate about building
-          beautiful, performant, and accessible web applications. With expertise
-          in React, Next.js, and modern JavaScript, I bring ideas to life on the web.
+          I’m Natasha, passionate about building beautiful, performant, and accessible web applications.
+          With expertise in React, Next.js, and modern JavaScript, I bring creativity and precision to every project.
         </p>
-      </section>
+      </motion.section>
 
-      <section style={{ maxWidth: '700px', margin: '2rem auto' }}>
+      <motion.section
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        variants={variants}
+      >
         <h2>Core Skills</h2>
         <ul>
           <li>JavaScript (ES6+), TypeScript</li>
@@ -39,7 +58,9 @@ export default function Home() {
           <li>Git, GitHub, CI/CD pipelines</li>
           <li>Responsive & Accessible Design</li>
         </ul>
-      </section>
-    </>
+      </motion.section>
+    </main>
   );
 }
+
+

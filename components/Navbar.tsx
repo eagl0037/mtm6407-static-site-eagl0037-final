@@ -1,6 +1,11 @@
 import Link from 'next/link';
 
 export default function Navbar() {
+  const linkStyle = {
+    color: 'white',
+    textDecoration: 'none',
+  };
+
   return (
     <nav style={{
       display: 'flex',
@@ -8,25 +13,15 @@ export default function Navbar() {
       gap: '2rem',
       padding: '1rem',
       backgroundColor: '#6c63ff',
-      color: 'white',
       fontWeight: '600',
       fontSize: '1.2rem',
     }}>
-      <Link href="/" style={{ color: 'white', textDecoration: 'none' }}>
-        Home
-      </Link>
-      <Link href="/about" style={{ color: 'white', textDecoration: 'none' }}>
-        About
-      </Link>
-      <Link href="/contact" style={{ color: 'white', textDecoration: 'none' }}>
-        Contact
-      </Link>
-      <Link href="/fun" style={{ color: 'white', textDecoration: 'none' }}>
-        Fun
-      </Link>
-      <Link href="/project" style={{ color: 'white', textDecoration: 'none' }}>
-        Project
-      </Link>
+      <Link href="/" style={linkStyle}>Home</Link>
+      <Link href="/about" style={linkStyle}>About</Link>
+      <Link href="/contact" style={linkStyle}>Contact</Link>
+      <Link href="/fun" style={linkStyle}>Fun</Link>
+      <Link href="/project" style={linkStyle}>Project</Link>
     </nav>
   );
 }
+

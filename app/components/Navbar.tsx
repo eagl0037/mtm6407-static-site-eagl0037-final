@@ -1,6 +1,18 @@
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
+import { motion } from 'framer-motion';
 
 export default function Navbar() {
+  const pathname = usePathname();
+
+  const links = [
+    { href: '/', label: 'Home' },
+    { href: '/about', label: 'About' },
+    { href: '/contact', label: 'Contact' },
+    { href: '/fun', label: 'Fun' },
+    { href: '/project', label: 'Project' },
+  ];
+
   return (
     <nav style={{
       display: 'flex',
@@ -11,22 +23,27 @@ export default function Navbar() {
       color: 'white',
       fontWeight: '600',
       fontSize: '1.2rem',
+      position: 'relative',
     }}>
-      <Link href="/" style={{ color: 'white', textDecoration: 'none' }}>
-        Home
-      </Link>
-      <Link href="/about" style={{ color: 'white', textDecoration: 'none' }}>
-        About
-      </Link>
-      <Link href="/contact" style={{ color: 'white', textDecoration: 'none' }}>
-        Contact
-      </Link>
-      <Link href="/fun" style={{ color: 'white', textDecoration: 'none' }}>
-        Fun
-      </Link>
-      <Link href="/project" style={{ color: 'white', textDecoration: 'none' }}>
-        Project
-      </Link>
+      {links.map(({ href, label }) => (
+        <Link key={href} href={href} style={{ color: 'white', textDecoration: 'none', position: 'relative' }}>
+          {label}
+          {pathname === href && (
+            <motion.span
+              layoutId="underline"
+              style={{
+                position: 'absolute',
+                height: 3,
+                backgroundColor: '#fff',
+                bottom: -6,
+                left: 0,
+                right: 0,
+                borderRadius: 3,
+              }}
+            />
+          )}
+        </Link>
+      ))}
     </nav>
   );
 }
