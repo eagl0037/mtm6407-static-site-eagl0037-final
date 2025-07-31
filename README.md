@@ -54,7 +54,7 @@ The static site includes the following fully developed pages:
 Clone the repo in Terminal or VScode and install dependencies:
 
 
-git clone https://github.com/yourusername/your-repo.git
+git clone https://github.com/eagl0037/mtm6407-static-site-eagl0037-final.git
 cd your-repo
 npm install
 
