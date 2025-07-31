@@ -13,8 +13,8 @@ export default function Fun() {
       <section>
         <h2>Favorite Quotes</h2>
         <ul>
-          <li>"Code is like humor. When you have to explain it, it’s bad." — Cory House</li>
-          <li>"First, solve the problem. Then, write the code." — John Johnson</li>
+          <li>“Do not go where the path may lead, go instead where there is no path and leave a trail.” — Ralph Waldo Emerson</li>
+          <li>“The best way to predict the future is to invent it.” — Alan Kay</li>
           <li>"Experience is the name everyone gives to their mistakes." — Oscar Wilde</li>
         </ul>
       </section>
