@@ -18,13 +18,15 @@ export default function Home() {
         variants={variants}
         style={{ textAlign: 'center', marginBottom: '3rem' }}
       >
-        <Image
-          src="/yurr.png"
-          alt="Natasha Eagles"
-          width={160}
-          height={160}
-          priority
-        />
+       <div style={{ position: 'relative', width: '160px', height: '160px', margin: '0 auto' }}>
+  <Image
+    src="/natasha.jpeg"
+    alt="Natasha Eagles"
+    fill
+    style={{ objectFit: 'cover', borderRadius: '50%' }} // optional: rounded image
+    priority
+  />
+</div>
         <h1>Natasha Eagles</h1>
         <p>Full Stack Developer | Web Designer | Creative Problem Solver</p>
       </motion.section>
@@ -59,8 +61,18 @@ export default function Home() {
           <li>Responsive & Accessible Design</li>
         </ul>
       </motion.section>
+      
+      {/* Add your new image here */}
+      <motion.section
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        variants={variants}
+        style={{ textAlign: 'center', marginBottom: '3rem' }}
+      >
+
+      </motion.section>
     </main>
   );
 }
-
 

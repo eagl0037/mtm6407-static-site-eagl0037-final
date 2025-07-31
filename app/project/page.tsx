@@ -5,17 +5,16 @@ import React from 'react';
 export default function ProjectPage() {
   return (
     <section className="project-page container">
-      <h1 className="project-title">Awesome Project Title</h1>
+      <h1 className="project-title">My Projects</h1>
       <p className="project-description">
-        This is a beautifully designed project page to showcase your work. 
-        Describe your project here in a concise, engaging way. Highlight features, challenges, or what makes it unique.
+        View my work!
       </p>
 
       <div className="images-gallery">
-        <img src="https://via.placeholder.com/400x250?text=Project+Screenshot+1" alt="Screenshot 1" />
-        <img src="https://via.placeholder.com/400x250?text=Project+Screenshot+2" alt="Screenshot 2" />
-        <img src="https://via.placeholder.com/400x250?text=Project+Screenshot+3" alt="Screenshot 3" />
-      </div>
+  <img src="/screenshot 1.png" alt="Natasha Eagles Portfolio" />
+  <img src="/screenshot 2.png" alt="Pwint Mosaic App" />
+  <img src="/screenshot 3.png" alt="Mineveil Minecraft Forum" />
+</div>
 
       <h2>Tech Stack</h2>
       <ul className="tech-stack">
